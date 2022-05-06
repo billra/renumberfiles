@@ -40,7 +40,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-# bug in gopro image file writing, skips round 10k numbers (but every time interval is written)
-# e.g.: "Could not open file : photos/G0020000.JPG"
-# This code renumbers these files to remove skipped numbers.
