@@ -24,9 +24,10 @@ def rename(folder):
             offset+=current_num-expect_num
             print(f'missing {expect_num}, got {current_num}, offset is now {offset}')
         if offset: # do a rename
-            pass # todo
+            src=os.path.join(folder,filename_from_number(current_num))
+            dst=os.path.join(folder,filename_from_number(current_num-offset))
+            os.rename(src,dst)
         expect_num=current_num+1
-        print(filename_from_number(current_num))
 
 def main():
     print('renumber files')
